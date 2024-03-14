@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.Collections;
 
 @Component
 @NonNullApi
@@ -42,7 +41,7 @@ public class JwtFilter extends OncePerRequestFilter {
             }
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null)
                 SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(
-                        username, null, Collections.emptyList()
+                        username, null, jwtUtils.getRoles(token)
                 ));
         }
         filterChain.doFilter(request, response);
