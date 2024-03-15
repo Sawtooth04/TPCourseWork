@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
-    @GetMapping("/")
+    @GetMapping("/api")
     public ResponseEntity<MainResponse> getRootEndpoints(@Nullable MainAssembler assembler) {
         if (assembler != null)
             return ResponseEntity.ok(assembler.toModel(new MainResponse()));

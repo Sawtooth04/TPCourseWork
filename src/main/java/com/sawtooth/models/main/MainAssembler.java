@@ -20,7 +20,7 @@ public class MainAssembler extends RepresentationModelAssemblerSupport<MainRespo
     @Override
     public MainResponse toModel(MainResponse entity) {
         entity.add(linkTo(methodOn(MainController.class).getRootEndpoints(null)).withSelfRel());
-        entity.add(linkTo(methodOn(LoginController.class).login(new Login(null, null))).withRel("login"));
+        entity.add(linkTo(methodOn(LoginController.class).login(new Login(null, null), null)).withRel("login"));
         return entity;
     }
 }
