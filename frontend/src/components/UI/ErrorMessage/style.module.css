@@ -1,0 +1,15 @@
+.errorMessage {
+  composes: errorMessage from "./style-media.module.scss";
+  display: block;
+  margin-bottom: 0;
+  color: #AD1B1B;
+  text-align: center;
+  font-family: "TTNormsPro", "sans-serif";
+}
+
+.errorMessageHidden {
+  display: none;
+  composes: errorMessage;
+}
+
+/*# sourceMappingURL=style.module.css.map */

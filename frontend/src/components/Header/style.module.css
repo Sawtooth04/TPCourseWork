@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 97%;
+  height: 7.4%;
+  padding: 0 1.5%;
+  background-color: #464D5C;
+}
+
+.headerLogo {
+  width: auto;
+  height: 62.5%;
+}
+
+.headerCustomer {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.headerCustomerText {
+  margin: 0;
+  color: #F0F0F0;
+  font-family: "TTNormsPro SemiBold", "sans-serif";
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.headerCustomerHint {
+  display: none;
+  position: absolute;
+  right: 1%;
+  bottom: -45%;
+  margin: 0;
+  padding: 0.2% 1%;
+  color: #F0F0F0;
+  background-color: #464D5C;
+  border: #CDCDCD 0.1vw solid;
+  border-radius: 0.4em;
+  font-family: "TTNormsPro", "sans-serif";
+  font-size: 20px;
+  z-index: 10;
+}
+
+.headerCustomerText:hover + p {
+  display: block;
+}
+
+/*# sourceMappingURL=style.module.css.map */

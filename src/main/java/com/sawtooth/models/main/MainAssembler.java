@@ -1,5 +1,6 @@
 package com.sawtooth.models.main;
 
+import com.sawtooth.controllers.AuthenticationController;
 import com.sawtooth.controllers.LoginController;
 import com.sawtooth.controllers.MainController;
 import com.sawtooth.models.login.Login;
@@ -21,6 +22,7 @@ public class MainAssembler extends RepresentationModelAssemblerSupport<MainRespo
     public MainResponse toModel(MainResponse entity) {
         entity.add(linkTo(methodOn(MainController.class).getRootEndpoints(null)).withSelfRel());
         entity.add(linkTo(methodOn(LoginController.class).login(new Login(null, null), null)).withRel("login"));
+        entity.add(linkTo(methodOn(AuthenticationController.class).get(null, null)).withRel("auth-get"));
         return entity;
     }
 }

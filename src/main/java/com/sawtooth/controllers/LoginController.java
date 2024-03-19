@@ -26,6 +26,8 @@ public class LoginController {
     private final AuthenticationManager authenticationManager;
     @Value("${security.jwt.cookie.name}")
     private String jwtCookieName;
+    @Value("${security.jwt.expiration}")
+    private int jwtExpiration;
 
     @Autowired
     public LoginController(UserService userService, JwtUtils jwtUtils, AuthenticationManager authenticationManager) {
@@ -50,7 +52,9 @@ public class LoginController {
         token = jwtUtils.generateToken(userService.loadUserByUsername(login.username()));
         cookie = new Cookie(jwtCookieName, token);
         cookie.setHttpOnly(true);
-        cookie.setSecure(true);
+        cookie.setSecure(false);
+        cookie.setPath("/");
+        cookie.setMaxAge(jwtExpiration);
         response.addCookie(cookie);
         return ResponseEntity.ok(token);
     }

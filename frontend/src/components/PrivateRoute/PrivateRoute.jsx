@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import styles from './style.module.css';
 import Header from "../Header/Header";
 import Content from "../Content/Content";
 import CsrfFetch from "../../utils/CsrfFetch";
@@ -12,7 +13,8 @@ const PrivateRoute = () => {
     useEffect(() => {
         async function getAuthentication() {
             let newAuthentication, response = await CsrfFetch(await CentralServerLinksProvider.getLink('auth-get'), {
-                method: 'get'
+                method: 'get',
+                credentials: 'include'
             });
             
             if (response.ok) {
@@ -27,7 +29,7 @@ const PrivateRoute = () => {
     }, [navigate]);
 
     return (
-        <div className={'privateRoute'}>
+        <div className={styles.privateRoute}>
             <Header authentication={authentication}/>
             <Content/>
         </div>

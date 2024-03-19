@@ -1,0 +1,18 @@
+.textInput {
+  composes: textInput from "./style-media.module.scss";
+  width: 94%;
+  height: 3.5vh;
+  padding: 0 3%;
+  background-color: inherit;
+  border: #464D5C 0.15vw solid;
+  border-radius: 0.3em;
+  outline: none;
+  font-family: "TTNormsPro", "sans-serif";
+  transition: border-color 200ms ease-out;
+}
+
+.textInput:hover, .textInput:focus {
+  border-color: #CDCDCD;
+}
+
+/*# sourceMappingURL=style.module.css.map */

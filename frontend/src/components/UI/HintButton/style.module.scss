@@ -1,0 +1,45 @@
+@import "../../../colors";
+
+.hintButton {
+  position: relative;
+  width: auto;
+  height: 83%;
+  margin-left: 0.67%;
+  cursor: pointer;
+}
+
+.hintButtonDisable {
+  composes: hintButton;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hintButtonText {
+  composes: hintButtonText from "./style-media.module.scss";
+  font-family: "TTNormsPro", "sans-serif";
+}
+
+.hintButtonImage {
+  width: auto;
+  height: 100%;
+}
+
+.hintButtonHint {
+  composes: hintButtonHint from "./style-media.module.scss";
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -100%;
+  padding: 1% 55%;
+  margin: 0;
+  background-color: $second_color;
+  border: $border_color 0.1vw solid;
+  border-radius: 0.4em;
+  font-family: "TTNormsPro", "sans-serif";
+  white-space: nowrap;
+  transition: opacity 200ms ease-out;
+}
+
+.hintButton:hover .hintButtonHint {
+  display: block;
+}
