@@ -1,0 +1,25 @@
+.button {
+  position: relative;
+  width: 1.562vw;
+  height: 1.562vw;
+  background-color: inherit;
+  border: rgba(255, 255, 255, 0) 0.15vw solid;
+  border-radius: 0.3em;
+  outline: none;
+  transition: border-color 200ms ease-out;
+  cursor: pointer;
+}
+
+.button > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.button:hover, .button:focus {
+  border-color: #CDCDCD;
+}
+
+/*# sourceMappingURL=style.module.css.map */

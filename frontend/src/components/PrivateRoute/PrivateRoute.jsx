@@ -31,7 +31,7 @@ const PrivateRoute = () => {
     return (
         <div className={styles.privateRoute}>
             <Header authentication={authentication}/>
-            <Content/>
+            <Content authentication={authentication}/>
         </div>
     );
 };

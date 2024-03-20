@@ -1,0 +1,48 @@
+@import "../../colors";
+
+.departments {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.departmentsHeader {
+  display: flex;
+  align-items: center;
+  height: 9%;
+
+  & > *:first-child + button {
+    margin-left: 1.85%;
+  }
+}
+
+.departmentsHeaderText {
+  margin-left: 1.85%;
+  font-family: "TTNormsPro SemiBold", "sans-serif";
+  font-size: 22px;
+}
+
+.departmentsBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 81.48vh;
+    overflow-y: auto;
+  }
+
+  & > *::-webkit-scrollbar{
+    width: 0.6vw;
+    height: 0.6vw;
+  }
+
+  & > *::-webkit-scrollbar-thumb {
+    background-color: $border_color;
+    border-radius: 0.5vw;
+  }
+}

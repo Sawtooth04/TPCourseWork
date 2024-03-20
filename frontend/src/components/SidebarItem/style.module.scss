@@ -1,0 +1,33 @@
+@import "../../colors";
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 83.8%;
+  height: 4.5%;
+  padding: 1% 8.1%;
+  cursor: pointer;
+}
+
+.sidebarItem:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 6%;
+  opacity: 0;
+  background-color: $border_color;
+  transition: opacity 200ms ease-out;
+}
+
+.sidebarItem:hover:after {
+  opacity: 1;
+}
+
+.sidebarItemText {
+  composes: sidebarItemText from "./style-media.module.scss";
+  font-family: "TTNormsPro SemiBold", "sans-serif";
+  margin-left: 5%;
+}

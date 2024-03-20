@@ -1,0 +1,44 @@
+.departments {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.departmentsHeader {
+  display: flex;
+  align-items: center;
+  height: 9%;
+}
+.departmentsHeader > *:first-child + button {
+  margin-left: 1.85%;
+}
+
+.departmentsHeaderText {
+  margin-left: 1.85%;
+  font-family: "TTNormsPro SemiBold", "sans-serif";
+  font-size: 22px;
+}
+
+.departmentsBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.departmentsBody > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 81.48vh;
+  overflow-y: auto;
+}
+.departmentsBody > *::-webkit-scrollbar {
+  width: 0.6vw;
+  height: 0.6vw;
+}
+.departmentsBody > *::-webkit-scrollbar-thumb {
+  background-color: #CDCDCD;
+  border-radius: 0.5vw;
+}
+
+/*# sourceMappingURL=style.module.css.map */

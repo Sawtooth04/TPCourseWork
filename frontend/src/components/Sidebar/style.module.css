@@ -1,0 +1,9 @@
+.sidebar {
+  composes: sidebar from "./style-media.module.scss";
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 0.15vw solid #CDCDCD;
+}
+
+/*# sourceMappingURL=style.module.css.map */
