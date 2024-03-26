@@ -18,12 +18,12 @@ public final class PersonDao implements com.sawtooth.dao.abstractions.PersonDao 
     }
 
     @Override
-    public Person Get(int id) {
+    public Person get(int id) {
         return null;
     }
 
     @Override
-    public List<Person> Get() {
+    public List<Person> get() {
         return null;
     }
 

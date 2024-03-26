@@ -18,7 +18,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 18%;
+  width: 40%;
+  margin-top: 14%;
   padding: 0 2%;
   border: #CDCDCD 0.15vw solid;
   border-radius: 1vw;

@@ -1,9 +1,6 @@
 package com.sawtooth.models.main;
 
-import com.sawtooth.controllers.AuthenticationController;
-import com.sawtooth.controllers.DepartmentController;
-import com.sawtooth.controllers.LoginController;
-import com.sawtooth.controllers.MainController;
+import com.sawtooth.controllers.*;
 import com.sawtooth.models.login.Login;
 import io.micrometer.common.lang.NonNullApi;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
@@ -25,6 +22,7 @@ public class MainAssembler extends RepresentationModelAssemblerSupport<MainRespo
         entity.add(linkTo(methodOn(LoginController.class).login(new Login(null, null), null)).withRel("login"));
         entity.add(linkTo(methodOn(AuthenticationController.class).get(null, null)).withRel("auth-get"));
         entity.add(linkTo(methodOn(DepartmentController.class).getLabels(0, 0, null)).withRel("department-label-get"));
+        entity.add(linkTo(methodOn(LocalityController.class).getByLevel(null, null)).withRel("locality-level"));
         return entity;
     }
 }

@@ -1,0 +1,18 @@
+.builder {
+  display: flex;
+}
+
+.builder > *:first-child {
+  left: 0;
+  top: 0;
+}
+.builder > *:first-child > * {
+  margin-top: 5%;
+  max-height: 50vh;
+}
+
+.builderLabel {
+  background-color: #CDCDCD;
+}
+
+/*# sourceMappingURL=style.module.css.map */
